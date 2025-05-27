@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit to Griot Vault</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      box-shadow: none;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      margin-right: 1.5rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+    .brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+    }
+    .brand mark {
+      background: #34d399;
+    }
+    main {
+      max-width: 700px;
+      margin: 7rem auto 4rem;
+      padding: 0 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: 600;
+    }
+    input, textarea, select {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    button {
+      background: #34d399;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer a {
+      color: #555;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="brand"><mark>Griot</mark> Vault</a>
+    <div>
+      <a href="report.html">Report</a>
+      <a href="presskit.html">Press Kit</a>
+      <a href="submit.html">Submit</a>
+    </div>
+  </nav>
+  <main>
+    <h1>Submit a Note</h1>
+    <p>Fill out the form below to contribute to the Griot Vault archive. Submissions should follow our structured YAML format for consistency and machine-readability.</p>
+
+    <form action="mailto:griotvault@proton.me" method="post" enctype="text/plain">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="type">Type</label>
+      <select id="type" name="type">
+        <option value="story">Story</option>
+        <option value="biography">Biography</option>
+        <option value="proverb">Proverb</option>
+        <option value="philosophy">Philosophy</option>
+        <option value="practice">Practice</option>
+      </select>
+
+      <label for="region">Region</label>
+      <select id="region" name="region">
+        <option value="West Africa">West Africa</option>
+        <option value="East Africa">East Africa</option>
+        <option value="Central Africa">Central Africa</option>
+        <option value="North Africa">North Africa</option>
+        <option value="Southern Africa">Southern Africa</option>
+        <option value="Caribbean">Caribbean</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Oceania">Oceania</option>
+        <option value="Global">Global</option>
+      </select>
+
+      <label for="ethnic_group">Ethnic Group</label>
+      <input type="text" id="ethnic_group" name="ethnic_group">
+
+      <label for="language">Language</label>
+      <input type="text" id="language" name="language">
+
+      <label for="date_range">Date Range</label>
+      <input type="text" id="date_range" name="date_range" placeholder="e.g. 1850–1900">
+
+      <label for="related_entries">Related Entries</label>
+      <input type="text" id="related_entries" name="related_entries" placeholder="Comma separated">
+
+      <label for="source_type">Source Type</label>
+      <select id="source_type" name="source_type">
+        <option value="oral">Oral</option>
+        <option value="written">Written</option>
+        <option value="archival">Archival</option>
+        <option value="fieldwork">Fieldwork</option>
+      </select>
+
+      <label for="sources">Sources</label>
+      <textarea id="sources" name="sources" rows="3" placeholder="Reference links or names"></textarea>
+
+      <label for="tags">Tags</label>
+      <input type="text" id="tags" name="tags" placeholder="Comma separated">
+
+      <label for="summary">Summary</label>
+      <textarea id="summary" name="summary" rows="4"></textarea>
+
+      <label for="context">Context</label>
+      <textarea id="context" name="context" rows="4"></textarea>
+
+      <label for="significance">Significance</label>
+      <textarea id="significance" name="significance" rows="4"></textarea>
+
+      <label for="related">Related</label>
+      <textarea id="related" name="related" rows="4"></textarea>
+
+      <label for="sources_detail">Sources (Detail)</label>
+      <textarea id="sources_detail" name="sources_detail" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <footer>
+    <span>Made possible by <strong>The Johnson Foundation</strong></span>
+    <span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">License Terms</a>
+    </span>
+  </footer>
+</body>
+</html>
