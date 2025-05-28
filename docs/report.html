@@ -11,38 +11,104 @@
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #111;
-      line-height: 1.7;
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      box-shadow: none;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    nav h1 {
+      margin: 0;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: #111;
     }
     header {
-      padding: 4rem 2rem 2rem;
+      padding: 6rem 2rem 4rem;
       text-align: center;
-      background: #f9fafb;
     }
     header h1 {
       font-family: 'DM Serif Display', serif;
-      font-size: 2.75rem;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      margin: 0.5rem 0;
     }
     header p {
-      font-size: 1.2rem;
-      max-width: 800px;
+      font-size: 1.25rem;
+      max-width: 700px;
       margin: 0 auto;
     }
+    .cta {
+      margin-top: 2rem;
+    }
+    .cta a {
+      display: inline-block;
+      background: #10b981;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0.5rem;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #059669;
+    }
     main {
+      padding: 3rem 1.5rem;
       max-width: 960px;
       margin: auto;
     }
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      background: #f9fafb;
+    }
     h2 {
-      font-size: 1.9rem;
-      margin-top: 3rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
-      font-family: 'DM Serif Display', serif;
     }
-    p {
-      margin-bottom: 1.25rem;
+    ul {
+      padding-left: 1.25rem;
     }
-    mark[data-type="problem"], mark[data-type="opportunity"], mark[data-type="solution"], mark[data-type="callout"] {
-      background: #f9a8d4;
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-around;
+    }
+    .feature-box {
+      flex: 1 1 260px;
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .feature-box span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .feature-box h3 {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+    }
+    .feature-box p {
+      font-size: 0.95rem;
+      color: #333;
     }
     footer {
       font-size: 0.8rem;
